@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Ledger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="finance-app-container">
+        <h1>Personal Finance Tracker</h1>
+        
+        <!-- Net Financial Position Frame Summary -->
+        <section class="balance-display">
+            <h2>Your Current Balance</h2>
+            <div id="total-balance" class="balance-amount">$0.00</div>
+        </section>
+
+        <!-- Dynamic Entry Addition Interface Form -->
+        <section class="transaction-form-box">
+            <h3>Add New Transaction</h3>
+            <form id="ledger-form">
+                <div class="input-group">
+                    <label for="text-description">Description</label>
+                    <input type="text" id="text-description" placeholder="e.g., Groceries, Salary" required autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label for="numerical-amount">Amount ($)</label>
+                    <input type="number" id="numerical-amount" step="0.01" placeholder="Positive = Income, Negative = Expense" required>
+                </div>
+                <button type="submit" class="submit-ledger-btn">Process Transaction</button>
+            </form>
+        </section>
+
+        <!-- Rendered Records Output Matrix Container -->
+        <section class="history-container">
+            <h3>Transaction History</h3>
+            <ul id="transaction-list" class="transaction-list">
+                <!-- Programmatic list items map here dynamically -->
+            </ul>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
